@@ -47,15 +47,23 @@
           </div>
         </div>
       </nav>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>TextUtils</strong> Change your text according to your view...
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
       <div class="container">
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-          </div>
+        <form action="/analyze" method="POST">
+          {% csrf_token %}
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
+          <div class="form-check form-switch">
+            <input name="removepunc" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Remove Punctions</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
