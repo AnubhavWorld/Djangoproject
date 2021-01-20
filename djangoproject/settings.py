@@ -25,7 +25,7 @@ SECRET_KEY = '^ymndy&7vvvn+^mxw)2^)liujja307ox9jpn@se%w&!sclkmdg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['shrouded-bastion-61475.herokuapp.com']
 
 
 # Application definition
