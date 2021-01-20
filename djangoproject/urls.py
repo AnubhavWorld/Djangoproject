@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from .views import homeView,register,login,home,help,blog,addblog,registerUser,temp
 urlpatterns = [
-    path('',homeView,name='home-view'),
+    path('',home,name='home-view'),
     path('register/',register,name='register'),
     path('login/',login,name='login'),
     path('help/',help,name='help'),
